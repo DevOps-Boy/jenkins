@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins_pipeline
+    restart: always
+    ports:
+      - "8080:8080"
+
+  webserver:
+    image: ubuntu:latest
+    container_name: webserver
+    restart: always
+    ports:
+      - "80:80"
+
